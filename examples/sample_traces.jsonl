@@ -1,0 +1,4 @@
+{"id": "t1", "input": "Refund order A123", "output": "Refunded A123.", "tool_calls": [{"name": "get_orders", "args": {"customer_id": "a@b.com"}}, {"name": "issue_refund", "args": {"order_id": "A123", "amount": 500}}], "success": false}
+{"id": "t2", "input": "What is your return policy?", "output": "Returns are accepted within 30 days.", "tool_calls": [], "success": false}
+{"id": "t3", "input": "Where is my parcel?", "output": "It arrives tomorrow.", "tool_calls": [{"name": "track_parcel", "args": {"order_id": "A123"}}], "success": true}
+{"id": "t4", "input": "Refund order B777", "output": "Refunded B777.", "tool_calls": [{"name": "get_orders", "args": {"customer_id": "C42"}}, {"name": "search_kb", "args": {"query": "refund policy"}}, {"name": "issue_refund", "args": {"order_id": "B777", "amount": 300}}], "success": true}
